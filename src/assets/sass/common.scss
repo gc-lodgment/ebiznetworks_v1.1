@@ -1,0 +1,1130 @@
+@charset "utf-8";
+
+// @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+// @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+// @import url('https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css');
+// @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+// @import url('/assets/fonts/nanumsquareround/nanumsquareround.css');
+@import url('/assets/fonts/notosanskr/notosanskr.css');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600&display=swap');
+
+@import './base';
+@import './override';
+@import './grid';
+
+body {
+    font-family: $font-stack;
+    font-display: swap;
+    // letter-spacing: -0.3px;
+    color: $font-color;
+}
+
+.header,
+.container,
+.footer {
+    position: relative;
+}
+
+.container[role=main] {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// --------------------
+// header 영역
+// --------------------
+// mobile & tablet
+@media (max-width: 991px) {
+    .header {
+        $line-ht: 6px;
+        $hd-ht: 50px;
+        z-index: 10;
+        // @include pos(absolute, 0, 0);
+        width: 100%;
+        height: $hd-ht;
+
+        .group-f {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .gnb {
+            width: 100%;
+            height: $hd-ht;
+            background-color: #fff;
+
+            .gnb-area {
+                height: 100%;
+
+                .logo-cover {
+                    z-index: 11;
+                    position: relative;
+                    height: 100%;
+                    text-align: center;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+
+                    .logo {
+                        .logo-text {
+                            height: 30px;
+                        }
+                    }
+
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        height: $hd-ht;
+                        vertical-align: middle;
+                    }
+
+                }
+
+                .nav-tab {
+                    z-index: 12;
+                    @include pos(absolute, 0px, null, null, 0px);
+                    @include ap-reset;
+                    @include sizes($hd-ht);
+
+                    .bar {
+                        @include center-block;
+                        width: 20px;
+                        height: 2px;
+                        // background: #fff;
+                        background-color: #000;
+
+                        &:not(:first-child) {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+
+                .nav-bar {
+                    // display: none;
+                    z-index: 10;
+                    @include flt(right);
+                    right: 20px;
+                    @include pos(fixed, $hd-ht, 0);
+                    @include sizes(100%);
+                    background-color: rgba(0, 0, 0, .5);
+
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity .3s ease;
+
+                    &.active {
+                        // display: block;
+                        opacity: 1;
+                        visibility: visible;
+
+                        .main-nav {
+                            right: 0px;
+                        }
+                    }
+
+                    .main-nav {
+                        // @include pos(absolute, 0, null, null, -180px);
+                        @include pos(absolute, 0, null, null, -205px);
+                        @include size(55%, 100%);
+                        width: 205px;
+                        padding-top: 30px;
+                        padding-left: 25px;
+                        box-sizing: border-box;
+                        background-color: #fff;
+                        transition: all .3s ease;
+
+                        .menu {
+                            >li {
+
+                                &:not(:first-child) {
+                                    margin-top: 15px;
+                                }
+
+                                >a {
+                                    position: relative;
+                                    display: block;
+                                    font-size: 14px;
+                                    padding-bottom: 8px;
+                                    letter-spacing: -0.7px;
+                                    border-bottom: 1px solid #ddd;
+
+                                    &:hover,
+                                    &.active {
+                                        // color: $gnb-hover-color;
+                                        color: $primary-color-deepdark;
+                                    }
+                                }
+
+                                .menu-2 {
+                                    margin-top: 5px;
+                                    // padding: 5px 0;
+                                    // border-bottom: 1px solid #ddd;
+
+                                    >li {
+                                        font-size: 12.5px;
+
+                                        a {
+                                            display: block;
+                                            line-height: 1.428;
+                                            padding-left: 3px;
+
+                                            &:before {
+                                                content: '·';
+                                                margin-right: 3px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .counsel-wrapper {
+                z-index: 1;
+                @include pos(fixed, 100px, null, null, 15px);
+
+                .counsel-btn {
+                    $wd: 45px;
+                    @include sizes($wd);
+                    box-shadow: 0 0px 5px 5px rgba(0, 0, 0, .08);
+                    border-radius: 50%;
+
+                    >img {
+                        border-radius: 50%;
+                        width: $wd;
+                    }
+                }
+            }
+        }
+    }
+
+    .counsel-form-mask {
+        z-index: 20;
+        @include pos(fixed, 0, 0);
+        @include sizes(100%);
+        background-color: rgba(0, 0, 0, .5);
+        transition: opacity .3s ease;
+        display: none;
+        // display: table !important;
+        opacity: 0;
+        visibility: hidden;
+
+        // &.mobile {
+        //     display: table !important;
+        //     opacity: 0;
+        //     visibility: hidden;
+        // }
+
+        &.on {
+            display: table !important;
+            opacity: 1;
+            visibility: visible;
+
+            .counsel-form-wrapper {
+                .counsel-form-container {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .counsel-form-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+
+            .counsel-form-container {
+                width: 220px;
+                margin: 0px auto;
+                padding: 0px 15px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+                background-color: #fff;
+                transform: scale(1.1);
+                transition: all .3s ease;
+
+                .counsel-form-header {
+                    $wd: 40px;
+                    height: $wd/2;
+                    position: relative;
+
+                    .unfold-btn {
+                        @include sizes($wd);
+                        @include pos(absolute, -$wd/2, 50%);
+                        margin-left: -$wd/2;
+                        background-color: #fff;
+                        border: 3px solid #d3d3d3;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+
+                        .sic {
+                            font-size: 18px;
+                            color: #929292;
+                        }
+                    }
+                }
+
+                .counsel-form-body {
+                    padding-top: 10px;
+
+                    .form-group {
+                        &:not(:first-of-type) {
+                            margin-top: 5px;
+                        }
+
+                        .form-input,
+                        .form-textarea {
+                            padding: 5px 10px;
+                            border-color: #bebebe;
+                            background-color: transparent;
+                            font-size: 12px;
+                            color: #fff;
+
+                            &::placeholder {
+                                color: rgba(0, 0, 0, .7);
+                            }
+                        }
+
+                        .form-input {
+                            height: 30px;
+                        }
+
+                        .form-textarea {
+                            height: 70px;
+                        }
+                    }
+                }
+
+                .counsel-form-footer {
+                    margin-top: 10px;
+                    padding-bottom: 15px;
+
+                    .apply-btn {
+                        width: 100%;
+                        @include btn-size(8px 0px, 15px);
+                        background-color: $primary-color-dark;
+                        border-color: $primary-color-dark;
+                        border-bottom: 3px solid #ce731b;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// mobile
+@media (max-width: 768px) {}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// pc md & lg
+@media (min-width: 992px) {
+    $hd-ht: 80px;
+
+    #mainPage .header .gnb {
+        border-bottom: none;
+
+        &.affix {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+        }
+    }
+
+    .open-popup {
+        top: $hd-ht;
+    }
+
+    .header {
+        $line-ht: 6px;
+        z-index: 10;
+        width: 100%;
+        height: $hd-ht;
+        // margin-bottom: $line-ht;
+
+        .gnb {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: $hd-ht;
+            background-color: #fff;
+            border-bottom: 2px solid $primary-color;
+            box-sizing: border-box;
+
+            &.affix {
+                background-color: rgba(255, 255, 255, .85);
+                // box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+            }
+
+            .logo-cover {
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 40px;
+                display: inline-block;
+                height: 100%;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    height: $hd-ht;
+                    vertical-align: middle;
+                }
+
+                .logo {
+                    @include va;
+
+                    .logo-text {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .gnb-area {
+                height: 100%;
+
+                .nav-bar {
+                    // @include flt(right);
+                    // right: 20px;
+                    position: relative;
+
+                    .main-nav {
+                        .tel-cover {
+                            display: inline-block;
+                            padding: 5px;
+                            background-color: $primary-color-dark;
+                            color: #fff;
+                            font-size: 13px;
+                            // border: 1px solid #ddd;
+                            // border-top: transparent;
+                            // @include pos(absolute, 2px);
+                            @include pos(absolute, 0px);
+                            right: 0;
+                        }
+
+                        .menu {
+                            text-align: center;
+                            font-size: 0;
+
+                            >li {
+                                position: relative;
+                                display: inline-block;
+                                height: $hd-ht;
+                                box-sizing: border-box;
+                                font-size: 14px;
+                                transition: border .2s;
+
+                                &:after {
+                                    content: '';
+                                    display: inline-block;
+                                    height: $hd-ht;
+                                    vertical-align: middle;
+                                }
+
+                                >a {
+                                    @include va;
+                                    padding: 0 10px;
+                                    margin: 0 5px;
+                                    letter-spacing: -0.7px;
+
+                                }
+
+                                &:hover,
+                                &.active {
+                                    >a {
+                                        color: $primary-color-deepdark;
+                                    }
+
+                                }
+
+                                &:hover {
+                                    border-bottom: 4px solid $primary-color-deepdark;
+
+                                    .menu-2 {
+                                        padding: 5px 0;
+                                        height: auto;
+                                    }
+                                }
+
+                                .menu-2 {
+                                    // display: none;
+                                    @include pos(absolute, $hd-ht, 0);
+                                    width: 100%;
+                                    background-color: rgba(0, 0, 0, .5);
+                                    text-align: center;
+                                    height: 0;
+                                    overflow: hidden;
+                                    box-sizing: border-box;
+                                    transition: all .2s;
+
+                                    >li {
+                                        >a {
+                                            display: block;
+                                            padding: 5px 0;
+                                            line-height: 1.428;
+                                            color: #fff;
+
+                                            &:hover {
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .counsel-form-wrapper {}
+            }
+        }
+
+        .line {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50%;
+                height: $line-ht;
+            }
+
+            // &:before {
+            //     left: 0;
+            //     background-color: #74b02f;
+            // }
+
+            // &:after {
+            //     right: 0;
+            //     background-color: #f4c720;
+            // }
+        }
+    }
+
+    .counsel-form-mask {
+        z-index: 20;
+        // $wd: 200px;
+        @include pos(fixed, 150px, 50%);
+        margin-left: 550px;
+
+        @include screen-max($w: 1540px) {
+            left: auto;
+            right: 10px;
+            margin-left: auto;
+        }
+
+        .counsel-form-wrapper {
+            .counsel-form-container {
+                width: 200px;
+                margin: 0px auto;
+                padding: 0px 20px;
+                box-sizing: border-box;
+                border-radius: 2px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+                background: url('/assets/img/common/side/counsel_form_bg.png') no-repeat center / cover;
+
+                .counsel-form-body {
+                    padding-top: 15px;
+
+                    .form-group {
+                        &:not(:first-of-type) {
+                            margin-top: 5px;
+                        }
+
+                        .form-input,
+                        .form-textarea {
+                            padding: 5px 10px;
+                            border-color: #fff;
+                            background-color: transparent;
+                            font-size: 13px;
+                            color: #fff;
+                            font-weight: 300;
+
+                            &::placeholder {
+                                color: rgba(255, 255, 255, .7);
+                            }
+                        }
+
+                        .form-input {
+                            height: 30px;
+                        }
+
+                        .form-textarea {
+                            height: 70px;
+                        }
+                    }
+                }
+
+                .counsel-form-footer {
+                    margin-top: 10px;
+                    padding-bottom: 15px;
+
+                    .apply-btn {
+                        width: 100%;
+                        @include btn-size(10px 0px, 16px);
+                        background-color: $primary-color-dark;
+                        border-color: $primary-color-dark;
+                        border-bottom: 3px solid #ce731b;
+                        color: #fff;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// pc md
+@media (min-width: 992px) and (max-width: 999px) {}
+
+// pc md and up ~ xl and down
+@media (min-width: 992px) and (max-width: 1420px) {
+    .header {
+        .gnb {
+            .logo-cover {
+                left: 15px;
+
+                .logo {
+                    .logo-img {
+                        // display: none;
+
+                    }
+
+                    .logo-text {
+                        display: none;
+                    }
+                }
+            }
+
+            .gnb-area {
+
+                .nav-bar {
+                    // @include flt(right);
+                    // right: 20px;
+                    position: relative;
+
+                    .main-nav {
+                        .menu {
+                            text-align: right;
+
+                            >li>a {
+                                padding: 0 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// --------------------
+// footer 영역
+// --------------------
+// mobile & tablet
+@media (max-width: 991px) {
+    .footer {
+        color: #9e9e9e;
+
+        .footer-container {
+            padding: 40px 0;
+            background-color: #3a3a3a;
+            @include ft(12px, #9e9e9e, 300);
+            text-align: center;
+
+            .logo-cover {
+                img {
+                    height: 40px;
+                }
+            }
+
+            .address {
+                margin-top: 25px;
+                padding-bottom: 15px;
+                line-height: 1.5;
+
+                .copyright {
+                    margin-top: 15px;
+                }
+            }
+
+            .call-container {
+                display: inline-block;
+                font-size: 18px;
+                padding: 12px 20px;
+                margin-bottom: 25px;
+                // @include bdr(#9e9e9e);
+                @include bdr(#fff);
+                color: #fff;
+
+                >* {
+                    vertical-align: middle;
+                }
+
+                .phone {
+                    width: 35px;
+                }
+
+                .no {
+                    // margin-left: 15px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+}
+
+// mobile
+@media (max-width: 768px) {}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// pc md & lg
+@media (min-width: 992px) {
+    .footer {
+        color: #626262;
+
+        .footer-container {
+            padding: 40px 0;
+            background-color: #3a3a3a;
+            @include ft(12px, #9e9e9e, 300, $font-ntss);
+
+            .footer-area {
+                .split {
+                    position: relative;
+
+                    &.split-1 {
+                        float: left;
+                    }
+
+                    &.split-2 {
+                        float: right;
+                    }
+
+                    .logo-cover {
+                        @include pos(absolute, 0, 0);
+
+                        // img {
+                        //     width: 140px;
+                        // }
+                    }
+
+                    .address {
+                        margin-left: 125px;
+                        padding-left: 40px;
+                        padding-bottom: 15px;
+                        border-left: 1px solid #9e9e9e;
+                        line-height: 1.5;
+
+                        .copyright {
+                            margin-top: 20px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .call-container {
+                        font-size: 25px;
+                        padding: 20px 35px;
+                        // @include bdr(#9e9e9e);
+                        @include bdr(#fff);
+                        color: #fff;
+
+                        >* {
+                            vertical-align: middle;
+                        }
+
+                        .no {
+                            // margin-left: 5px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .certified-container {
+            padding: 20px 0;
+            background-color: #e9e9e9;
+            border-top: 2px solid #fff;
+
+        }
+    }
+}
+
+// --------------------
+// subpage 영역
+// --------------------
+// mobile tablet xs & sm 
+@media (max-width: 991px) {
+    $pages: (about, brand, mattress, pillow, showroom);
+
+    @each $page in $pages {
+        .#{$page}-page {
+            .subvisual-sec {
+                .subvisual-container {
+                    height: 280px;
+                    background: url('/assets/img/m/#{$page}/visual.jpg') no-repeat center / cover;
+
+                }
+            }
+        }
+    }
+
+    .comm-page {
+        .subvisual-sec {
+            .subvisual-container {
+
+                .subvisual-content {
+                    @include pos(relative, 120px);
+                    padding-left: 15px;
+                    color: #fff;
+                    line-height: 1.3;
+                    text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+
+                    .subvisual-title {
+                        font-size: 26px;
+
+                        @include screen-xxs {
+                            font-size: 24px;
+                        }
+
+                        .sm {
+                            display: block;
+                            font-size: 12px;
+                            text-transform: uppercase;
+                        }
+
+                        .big {
+                            font-weight: 400;
+                        }
+
+                        .line {
+                            @include size(70px, 3px);
+                            @include line;
+                            margin: 3px 0 7px;
+                        }
+                    }
+
+                    .subvisual-text {
+                        font-size: 13px;
+                        line-height: 1.5;
+                        word-break: keep-all;
+
+                        @include screen-xxs {
+                            font-size: 12.5px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .pathbar-wrapper {
+        padding-top: 45px;
+
+        .pathbar-content {
+            padding: 0 15px;
+            border-bottom: 1px solid #bfbfbf;
+
+            .pathbar-container {
+                position: relative;
+                padding-bottom: 5px;
+
+                .pathbar-title {
+                    // @include pos(absolute, 10px);
+                    // right: 0;
+                    @include ft(20px, null, 700);
+                }
+
+                .pathbar-nav {
+                    .pathbar-list {
+                        margin-top: 20px;
+
+                        .pathbar-item {
+                            // @include dp;
+                            padding-bottom: 10px;
+
+                            >* {
+                                @include va;
+                            }
+
+                            .num-wrapper {
+                                display: inline-block;
+                                $wd: 20px;
+                                @include va-bef($wd);
+                                width: $wd;
+                                top: 1px;
+                                margin-right: 3px;
+                                border: 1px solid $font-color;
+                                border-radius: 50%;
+                                text-align: center;
+
+                                .num {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            &.arr {
+                                display: none;
+                                top: 4px;
+                                margin: 0 10px;
+                                font-size: 25px;
+                                color: #bfbfbf;
+                            }
+
+                            &.active {
+                                color: $primary-color;
+
+                                .num-wrapper {
+                                    border: 1px solid $primary-color;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// pd md & lg
+@media (min-width: 992px) {
+    $pages: (about, brand, mattress, pillow, showroom);
+
+    @each $page in $pages {
+        .#{$page}-page {
+            .subvisual-sec {
+                .subvisual-container {
+                    height: 288px;
+                    // background: url('/assets/img/#{$page}/visual.jpg') no-repeat center / cover;
+
+                }
+            }
+        }
+    }
+
+    .comm-page {
+        .subvisual-sec {
+            .subvisual-container {
+
+                .subvisual-content {
+                    @include pos(relative, 80px);
+                    padding-left: 60px;
+                    color: #fff;
+                    line-height: 1.3;
+                    text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+
+                    .subvisual-title {
+                        font-size: 50px;
+
+                        .sm {
+                            display: block;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                        }
+
+                        .big {
+                            font-weight: 400;
+                            letter-spacing: -4px;
+                        }
+
+                        .line {
+                            @include size(126px, 4px);
+                            @include line;
+                            margin: 5px 0 15px;
+                        }
+                    }
+
+                    .subvisual-text {
+                        font-size: 18px;
+                        line-height: 1.5;
+                        letter-spacing: -1px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .pathbar-wrapper {
+        padding-top: 55px;
+
+        .pathbar-content {
+            .pathbar-container {
+                position: relative;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #bfbfbf;
+
+                .pathbar-title {
+                    @include pos(absolute, 10px);
+                    right: 0;
+                    @include ft(20px, null, 700);
+                }
+
+                .pathbar-nav {
+                    .pathbar-list {
+                        .pathbar-item {
+                            @include dp;
+                            padding-bottom: 5px;
+
+                            >* {
+                                @include va;
+                            }
+
+                            .num-wrapper {
+                                display: inline-block;
+                                $wd: 20px;
+                                @include va-bef($wd);
+                                width: $wd;
+                                top: 1px;
+                                margin-right: 3px;
+                                border: 1px solid $font-color;
+                                border-radius: 50%;
+                                text-align: center;
+
+                                .num {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            &.arr {
+                                top: 4px;
+                                margin: 0 10px;
+                                font-size: 25px;
+                                color: #bfbfbf;
+                            }
+
+                            &.active {
+                                color: $primary-color;
+
+                                .num-wrapper {
+                                    border: 1px solid $primary-color;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.comm-page {
+    [class*=-picture] img {
+        width: 100%;
+    }
+
+}
+
+.shortcut-container {
+    z-index: 10;
+    right: 15px;
+    bottom: 50px;
+
+    .go-top {
+        display: none;
+        @include sizes(36px);
+        @include ap-reset;
+        background-color: rgba(0, 0, 0, .3);
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+    }
+}
+
+/* 로딩 애니메이션 */
+.lds-mask {
+    z-index: 999;
+    display: table;
+    @include pos(fixed, 0, 0);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .45);
+
+    .lds-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        $sizes: 150px;
+
+        .lds-container {
+            position: relative;
+            $mt: -12px;
+            $ctn-mt: -12px - 24px;
+            margin-top: $ctn-mt;
+
+            .lds-text {
+                @include pos(absolute, null, 0, $mt);
+                width: 100%;
+                text-align: center;
+                color: #fff;
+                letter-spacing: normal;
+                text-indent: 5px;
+                font-family: $font-ntss;
+            }
+        }
+
+        .lds-facebook {
+            display: inline-block;
+            position: relative;
+            width: 67px;
+            height: 62px;
+        }
+
+        .lds-facebook div {
+            display: inline-block;
+            position: absolute;
+            left: 11px;
+            width: 15px;
+            background: #fff;
+            animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+        }
+
+        .lds-facebook div:nth-child(1) {
+            left: 0px;
+            animation-delay: -0.24s;
+        }
+
+        .lds-facebook div:nth-child(2) {
+            left: 26px;
+            animation-delay: -0.12s;
+        }
+
+        .lds-facebook div:nth-child(3) {
+            left: 52px;
+            animation-delay: 0;
+        }
+
+        @keyframes lds-facebook {
+            0% {
+                top: 6px;
+                height: 55px;
+            }
+
+            50%,
+            100% {
+                top: 19px;
+                height: 30px;
+            }
+        }
+
+    }
+}
+
+
+@include screen-md {}
+
+@include screen-xs {}

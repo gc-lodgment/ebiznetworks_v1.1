@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@import '../../parts/variables';
+@import '../../parts/mixins';
+
+.sec {}
+
+.comm-sec {
+    padding: 90px 0 100px;
+
+    [class*=-title] {
+        text-align: center;
+
+        .cmt {
+            margin-top: 35px;
+            font-size: 26px;
+        }
+    }
+}
+
+.visual-sec {
+    .visual-wrapper {
+        height: 700px;
+        padding-top: 95px;
+        background: url('/img/landing/hoteloperation/visual_bg.jpg') no-repeat center / cover;
+        box-sizing: border-box;
+
+        .visual-content {
+            .visual-title {
+                color: #fff;
+                text-align: center;
+
+                .big {
+                    font-size: 28px;
+                    letter-spacing: 5px;
+                }
+
+                .title-img {
+                    width: 650px;
+                    text-align: center;
+                    padding: 50px 0 40px;
+                    margin: 0 auto;
+                    border-bottom: 3px solid #fff;
+                }
+
+                .cmt {
+                    margin-top: 30px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+.service-sec {
+    background-color: #e2ebee;
+
+    .service-wrapper {
+        .service-content {
+            .service-title {
+                .cmt {
+                    .bar-mark {
+                        position: relative;
+
+                        >.in {
+                            position: relative;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 13px;
+                            left: 5px;
+                            bottom: 0;
+                            background-color: rgba(137, 187, 238, 0.5);
+                        }
+                    }
+                }
+            }
+
+            .service-text {
+                .item-picture {
+                    margin-top: 80px;
+                }
+            }
+        }
+    }
+}
+
+.operation-sec {
+    padding-top: 0;
+    background-color: #f7d2a4;
+
+    .operation-wrapper {
+        .operation-title {
+            padding-top: 90px;
+            background-color: #d74431;
+
+            .cmt {
+                color: #fff;
+            }
+
+            .down-arr {
+                position: relative;
+                @include sizes(35px);
+                margin: 5px auto 0;
+                border: 4px solid #fff;
+                transform: rotate(-45deg);
+                border-top: transparent;
+                border-right: transparent;
+            }
+
+        }
+    }
+}
+
+.manpower-sec {
+    background-color: #ececec;
+}
+
+.record-sec {
+    background-color: #fff;
+}

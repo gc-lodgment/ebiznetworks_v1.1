@@ -1,0 +1,484 @@
+// mobile & tablet xs & sm
+@media (max-width: 991px) {
+
+    // about page
+    .about-page {
+
+        // main-intro 영역
+        .main-intro-sec {
+            padding: 25px 0;
+            background-color: #eff6e7;
+
+            .intro-content {
+                .intro-title {
+                    .big {
+                        font-weight: 300;
+                    }
+                }
+
+                .intro-text {
+                    .ceo {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                }
+
+                .intro-picture {
+                    margin-top: 10px;
+                }
+            }
+
+        }
+
+        // submain-intro-sec 영역
+        .submain-intro-sec {
+            padding: 25px 0;
+            background-color: #fff;
+
+            .intro-content {
+                .intro-area {
+                    .intro-title {
+                        margin-top: 0;
+
+                        .big {
+                            font-weight: 300;
+                        }
+                    }
+
+                    .intro-text {
+                        line-height: 1.8;
+                    }
+
+                    .intro-picture {
+                        margin-top: 10px;
+
+                        img.bor {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        // brand-intro 영역
+        .brand-intro-sec {
+            padding: 25px 0;
+            background-color: #eff6e7;
+
+            .intro-content {
+                .intro-title {
+                    .big {
+                        font-weight: 300;
+
+                        .greenlatex {
+                            height: 30px;
+                            margin-top: -5px;
+                            vertical-align: bottom;
+                        }
+                    }
+                }
+
+                .intro-text {
+                    .ceo {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                }
+
+                .intro-picture {
+                    margin-top: 10px;
+                }
+
+                .intro-certified {
+                    margin-top: 15px;
+                }
+
+                .intro-picture-area {
+                    margin-top: 20px;
+
+                    .split {
+
+                        &:not(:nth-child(1)):not(:nth-child(2)) {
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .intro-picture {
+                        img.bor {
+                            width: 100%;
+                        }
+
+                        figcaption {
+                            font-size: 13px;
+                            margin-top: 10px;
+                            line-height: 1.3;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        // certified-sec 영역
+        .brand-intro-sec.certified-sec {
+            padding-top: 25px;
+            font-family: 'Nanum Square', 'NanumSquare', sans-serif;
+            background-color: #fff;
+
+            .intro-container {
+                .intro-content {
+                    .intro-picture-area {
+                        .split {
+                            width: 50%;
+
+                            &.split-1 {
+                                float: left;
+                                padding-right: 15px;
+                            }
+
+                            &.split-2 {
+                                float: right;
+                                padding-left: 15px;
+                            }
+
+                            &.split-2+.split-1 {
+                                clear: both;
+                            }
+
+                            &:not(:nth-child(1)):not(:nth-child(2)) {
+                                margin-top: 10px;
+                            }
+                        }
+
+                        .picture-title {
+                            font-size: 13px;
+                            margin-bottom: 0px;
+                            letter-spacing: -0.7px;
+                            word-break: keep-all;
+
+                            &.dot-square {
+                                @include dot-square-xs($t: 4px);
+                                line-height: 1.3;
+                            }
+
+                            &.dot-square.c-red {
+                                &:before {
+                                    background-color: $c-red;
+                                }
+                            }
+
+                            &.dot-square.c-lightbrown {
+                                &:before {
+                                    background-color: $c-lightbrown;
+                                }
+                            }
+
+                            &.dot-square.c-blue {
+                                &:before {
+                                    background-color: $c-blue;
+                                }
+                            }
+                        }
+
+                        .intro-picture {
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .intro-cmt {
+                        font-size: 13px;
+                        letter-spacing: -0.7px;
+                        word-break: keep-all;
+
+                        &.dot-custom {
+                            @include dot-custom($pl: 15px, $t: 0, $mt: 10px);
+
+                            &:before {
+                                content: '※';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // latex-sec 영역
+        .latex-sec {
+            padding: 25px 0;
+
+            .split+.split .latex-content {
+                margin-top: 25px;
+            }
+
+            .latex-content {
+
+                .latex-title {
+                    .big {
+                        font-weight: 300;
+                    }
+                }
+
+
+                .latex-text {
+                    .num-row {
+                        @include num-row(20px);
+                    }
+                }
+
+                .latex-picture {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+// pc md & lg
+@media (min-width: 992px) {
+
+    // about page
+    .about-page {
+
+        // main-intro 영역
+        .main-intro-sec {
+            padding: 55px 0;
+            background-color: #eff6e7;
+
+            .intro-content {
+                .intro-title {
+                    .big {
+                        font-weight: 300;
+                    }
+
+                    margin-top: 45px;
+                }
+
+                .intro-text {
+                    .ceo {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+        }
+
+        // submain-intro-sec 영역
+        .submain-intro-sec {
+            padding: 55px 0;
+            background-color: #fff;
+
+            .intro-content {
+                .intro-area {
+                    .split {
+                        width: 50%;
+
+                        &:nth-child(1) {
+                            float: left;
+                            padding-right: 15px;
+
+                        }
+
+                        &:nth-child(2) {
+                            float: right;
+                            padding-left: 15px;
+
+
+                        }
+                    }
+
+                    .intro-title {
+                        margin-top: 0;
+
+                        .big {
+                            font-weight: 300;
+                        }
+                    }
+
+                    .intro-text {
+                        margin-top: 15px;
+                        line-height: 1.8;
+                    }
+
+                    .intro-picture {
+                        img.bor {
+                            width: 100%;
+                        }
+
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        // brand-intro 영역
+        .brand-intro-sec {
+            padding: 55px 0;
+            background-color: #eff6e7;
+
+            .intro-content {
+                .intro-title {
+                    .big {
+                        font-weight: 300;
+
+                        .greenlatex {
+                            vertical-align: bottom;
+                        }
+                    }
+                }
+
+                .intro-text {
+                    .ceo {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                }
+
+                .intro-certified {
+                    margin-top: 25px;
+                }
+
+                .intro-picture-area {
+                    margin-top: 45px;
+
+                    .split {
+                        width: 50%;
+
+                        &.split-1 {
+                            float: left;
+                            padding-right: 15px;
+                        }
+
+                        &.split-2 {
+                            float: right;
+                            padding-left: 15px;
+                        }
+
+                        &.split-2+.split-1 {
+                            clear: both;
+                        }
+
+                        &:not(:nth-child(1)):not(:nth-child(2)) {
+                            margin-top: 20px;
+                        }
+                    }
+
+                    .intro-picture {
+                        img.bor {
+                            width: 100%;
+                        }
+
+                        figcaption {
+                            margin-top: 10px;
+                            line-height: 1.3;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        // certified-sec 영역
+        .brand-intro-sec.certified-sec {
+            padding-top: 45px;
+            font-family: 'Nanum Square', 'NanumSquare', sans-serif;
+            background-color: #fff;
+
+            .intro-container {
+                .intro-content {
+                    .intro-picture-area {
+                        .picture-title {
+                            font-size: 20px;
+                            margin-bottom: 7px;
+                            letter-spacing: -0.7px;
+                            word-break: keep-all;
+
+                            &.dot-square {
+                                @include dot-square($pl: 20px, $s: 12px, $t: 6px);
+                            }
+
+                            &.dot-square.c-red {
+                                &:before {
+                                    background-color: $c-red;
+                                }
+                            }
+
+                            &.dot-square.c-lightbrown {
+                                &:before {
+                                    background-color: $c-lightbrown;
+                                }
+                            }
+
+                            &.dot-square.c-blue {
+                                &:before {
+                                    background-color: $c-blue;
+                                }
+                            }
+                        }
+                    }
+
+                    .intro-cmt {
+                        letter-spacing: -0.7px;
+                        word-break: keep-all;
+
+                        &.dot-custom {
+                            @include dot-custom($pl: 17px, $t: 0, $mt: 20px);
+
+                            &:before {
+                                content: '※';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // latex-sec 영역
+        .latex-sec {
+            padding: 55px 0;
+
+            .latex-content {
+
+                .latex-title {
+                    .big {
+                        font-weight: 300;
+                    }
+                }
+
+                .latex-area {
+                    .split {
+                        width: 50%;
+
+                        &.split-1 {
+                            float: left;
+                            padding-right: 15px;
+                        }
+
+                        &.split-2 {
+                            float: right;
+                            padding-left: 15px;
+                        }
+
+                        &.split-2+.split-1 {
+                            clear: both;
+                        }
+
+                        &:not(:nth-child(1)):not(:nth-child(2)) {
+                            margin-top: 40px;
+                        }
+                    }
+
+                    .latex-text {
+                        .num-row {
+                            @include num-row;
+                        }
+                    }
+
+                    .latex-picture {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
