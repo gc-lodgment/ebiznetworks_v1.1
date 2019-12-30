@@ -46,18 +46,18 @@ img.full {
 
 .group-f,
 .group {
-    width: $screen-width;
     margin: 0 auto;
-
-    &mini {
-        width: 970px;
-    }
+    box-sizing: border-box;
 
     &:after {
         content: '';
         display: block;
         clear: both;
     }
+}
+
+.group {
+    padding: 0 8px;
 }
 
 .ap-reset {
