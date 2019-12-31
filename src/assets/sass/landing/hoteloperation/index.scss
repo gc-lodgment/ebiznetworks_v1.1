@@ -25,7 +25,7 @@
 
         .inquiry-content {
             position: relative;
-            left: 140px;
+            left: 160px;
             width: 140px;
         }
     }
@@ -148,7 +148,7 @@
             .tabbar-wrapper {
                 padding-top: 60px;
                 background-color: $bg-red;
-                $tab-hd: 110px;
+                $tab-hd: 90px;
                 height: $tab-hd;
 
                 .tabbar-content {
@@ -178,7 +178,7 @@
                             font-size: 30px;
                             font-weight: 700;
                             text-align: center;
-                            line-height: 100px;
+                            line-height: $tab-hd - 10px;
                             cursor: pointer;
 
                             &:not(:first-child) {
