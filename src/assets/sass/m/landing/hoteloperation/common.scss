@@ -9,7 +9,7 @@
 body {
     // max-width: 768px;
     // max-width: 320px;
-    max-width: 375px;
+    max-width: $screen-width;
     margin: 0 auto;
 }
 
@@ -34,4 +34,175 @@ body {
     line-height: 1.425;
     font-family: $font-ntss;
     letter-spacing: -0.7px;
+}
+
+// footer 
+.footer {
+    padding: 15px 0 25px;
+    // background: #2F2F2F;
+    // color: #9A9A9A;
+    background: #323232;
+    color: #a3a3a3;
+    font-weight: normal;
+
+    .terms-bar {
+        padding: 0 7px;
+        padding-bottom: 10px;
+
+        .policy {
+            font-size: 10px;
+            letter-spacing: -1px;
+            line-height: 1.5;
+        }
+
+        .terms-list {
+            color: inherit;
+            font-size: 0;
+            text-align: center;
+
+            >li {
+                display: inline-block;
+                font-size: 11.5px;
+
+                &.l {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .sfa {
+        margin: 0 7px;
+        border-top: 1px solid #4C5155;
+
+        .split {
+            position: relative;
+        }
+
+        .split-1 {
+            margin-top: 5px;
+        }
+
+        .split-2 {
+            margin-top: 10px;
+        }
+
+        .logo-box {
+            position: relative;
+            margin: 20px 0;
+
+            //overflow: hidden;
+            img {
+                display: inline-block;
+
+                &.logo {
+                    height: 70px;
+                }
+
+                &.logo-goco {
+                    height: 30px;
+                }
+            }
+
+        }
+
+        /* 패밀리 사이트 */
+        .family-wrapper {
+            $wd: 115px;
+            $pm: 6px;
+
+            .family-site {
+                position: absolute;
+                //position: relative;
+                // top: 26px;
+                top: -2px;
+                left: 150px;
+                font-size: 11px;
+                line-height: 16px;
+                color: #a3a3a3;
+
+                .family-site-label {
+                    cursor: pointer;
+                    position: relative;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    width: $wd;
+                    height: 24px;
+                    padding-left: $pm;
+                    line-height: 24px;
+                    border: 1px solid #4c4c4c;
+                }
+
+                .site {
+                    z-index: 9999;
+                    position: absolute;
+                    display: none;
+                    box-sizing: border-box;
+                    left: 0;
+                    bottom: 23px;
+                    width: $wd;
+                    padding-bottom: $pm;
+                    border: 1px solid #4c4c4c;
+                    background-color: #323232;
+
+                    li {
+                        .fam_btn {
+                            padding: 3px $pm;
+                            line-height: 13px;
+                            word-break: keep-all;
+                        }
+
+                        &.group-name {
+                            margin-top: $pm;
+
+                            .fam_btn {
+                                font-weight: 700;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .addr-bar {
+            position: relative;
+            line-height: 1.5;
+
+            .addr {
+                font-size: 12px;
+                word-break: keep-all;
+
+                .info {
+                    margin-top: 12px;
+                    @include fst-mt0;
+
+                    .item {
+                        margin-right: 5px;
+
+                    }
+
+                    em.item {
+                        font-size: 14px;
+                    }
+                }
+
+                .copyright {
+                    margin-top: 12px;
+                    font-size: 11.5px;
+                    letter-spacing: -0.5px;
+                    color: #7f7f7f;
+                }
+            }
+        }
+
+        .four-list {
+            margin-top: 25px;
+
+            img {
+                height: 55px;
+                border-radius: 2px;
+            }
+        }
+    }
 }

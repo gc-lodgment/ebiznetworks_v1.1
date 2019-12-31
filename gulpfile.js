@@ -60,7 +60,7 @@ function template() {
 };
 
 function templateAll() {
-    return src([config.template.src, config.template.parts])
+    return src(config.template.src)
         .pipe(fileinclude({
             prefix: '@@',
             // basepath: '@file'
@@ -265,6 +265,7 @@ exports.sprite = sprite;
 exports.etc = etc;
 exports.testPathServer = testPathServer;
 exports.testPathLocal = testPathLocal;
-exports.serve = parallel(series(parallel(templateAll), scss, css, js, img, etc, bSync), watching);
-exports.build = parallel(series(parallel(templateAll), scss, css, js, img, etc, bSync), watching);
-exports.test = series(parallel(templateAll), scss, css, js, img, etc, copyTest, testPathServer, bSyncTest);
+exports.serve = parallel(series(parallel(template), scss, css, js, img, etc, bSync), watching);
+exports.build = parallel(series(parallel(template), scss, css, js, img, etc, bSync), watching);
+exports.test = series(parallel(template), scss, css, js, img, etc, copyTest, testPathServer, bSyncTest);
+exports.default = parallel(bSync, watching);
