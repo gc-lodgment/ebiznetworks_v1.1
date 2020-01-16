@@ -32,8 +32,16 @@ a:active {text-decoration:none; color:#353535}
 #recruit {display:block; text-align:center}
 #press {display:block; text-align:center; }
 .menu {text-decoration:none; color:#353535}
-.menu a:link, a:visited {text-decoration:none; color:#353535}
-.menu a:hover, a:active {text-decoration:none;color:#F60}
+.menu a:link,
+.menu a:visited {
+    text-decoration: none;
+    color: #353535
+}
+.menu a:hover,
+.menu a:active {
+    text-decoration: none;
+    color: #F60
+}
 
 #sub_bnr{width:100%; height:100px; text-align:center; float:left; margin-bottom: 50px; background-color:#000000}
 

@@ -190,7 +190,11 @@ img.full {
 }
 
 .c-lightblue {
-    color: $c-blue-light;
+    color: $c-blue-light !important;
+}
+
+.c-orange {
+    color: $c-orange !important;
 }
 
 .bor-b {
@@ -207,4 +211,26 @@ img.full {
 
 .mt-15 {
     margin-top: 15px;
+}
+
+.custom-icon-winpop {
+    position: relative;
+    font-size: 0;
+
+    &,
+    &:after {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #b4b4b4;
+        box-sizing: border-box;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 1px;
+
+    }
 }

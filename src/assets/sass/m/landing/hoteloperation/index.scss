@@ -3,571 +3,608 @@
 @import '../../parts/variables';
 @import '../../parts/mixins';
 
-#landingHtOpPage {
-    .sec {}
+// .landingHtOpPage {
+.sec {}
 
-    .comm-sec {
-        padding: 40px 0;
+.comm-sec {
+    padding: 40px 0;
 
-        .comm-title {
-            text-align: center;
+    .comm-title {
+        text-align: center;
 
-            .title {
-                >img {
-                    height: 28px;
-                }
+        .title {
+            >img {
+                height: 28px;
             }
+        }
 
-            .cmt {
-                margin-top: 15px;
-                font-size: 13px;
-                // padding: 0 10px;
-                // word-break: keep-all;
+        .cmt {
+            margin-top: 15px;
+            font-size: 13px;
+            // padding: 0 10px;
+            // word-break: keep-all;
 
-                @include screen-max(320px) {
-                    font-size: 12.5px;
-                    letter-spacing: -1.3px;
-                }
+            @include screen-max(320px) {
+                font-size: 12.5px;
+                letter-spacing: -1.3px;
             }
         }
     }
+}
 
-    .visual-sec {
-        .visual-wrapper {
-            height: 400px;
-            padding-top: 45px;
-            background: url('http://img.ebiznetworks.co.kr/m/landing/hoteloperation/visual_bg.jpg') no-repeat center / cover;
-            box-sizing: border-box;
+.visual-sec {
+    .visual-wrapper {
+        height: 400px;
+        padding-top: 45px;
+        background: url('http://img.ebiznetworks.co.kr/m/landing/hoteloperation/visual_bg.jpg') no-repeat center / cover;
+        box-sizing: border-box;
 
-            .visual-content {
-                .visual-title {
-                    color: #fff;
+        .visual-content {
+            .visual-title {
+                color: #fff;
+                text-align: center;
+
+                .big {
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                }
+
+                .title-img {
+                    width: 275px;
                     text-align: center;
-
-                    .big {
-                        font-size: 16px;
-                        letter-spacing: 3px;
-                    }
-
-                    .title-img {
-                        width: 275px;
-                        text-align: center;
-                        padding: 30px 0 30px;
-                        margin: 0 auto;
-                        border-bottom: 1px solid #fff;
-                    }
-
-                    .cmt {
-                        margin-top: 15px;
-                        font-size: 14px;
-                    }
+                    padding: 30px 0 30px;
+                    margin: 0 auto;
+                    border-bottom: 1px solid #fff;
                 }
-            }
-        }
-    }
-
-    .service-sec {
-        background-color: #e2ebee;
-
-        .service-wrapper {
-            .service-content {
-                .service-title {
-                    .cmt {
-                        .bar-mark {
-                            position: relative;
-
-                            >.in {
-                                position: relative;
-                            }
-
-                            &:before {
-                                content: '';
-                                position: absolute;
-                                display: block;
-                                width: 100%;
-                                height: 13px;
-                                left: 5px;
-                                bottom: 0;
-                                background-color: rgba(137, 187, 238, 0.5);
-                            }
-                        }
-                    }
-                }
-
-                .service-text {
-                    .item-picture {
-                        margin-top: 30px;
-
-                        >img {
-                            width: 350px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .operation-sec {
-        padding-top: 0;
-        background-color: #f7d2a4;
-
-        .operation-wrapper {
-            $bg-red: $c-red;
-
-            .operation-title {
-                padding-top: 40px;
-                background-color: $bg-red;
 
                 .cmt {
-                    color: #fff;
-                }
-
-                .down-arr {
-                    position: relative;
-                    @include sizes(15px);
-                    margin: 5px auto 0;
-                    border: 2px solid #fff;
-                    transform: rotate(-45deg);
-                    border-top: transparent;
-                    border-right: transparent;
-                }
-
-            }
-
-            .operation-tabs {
-                .tabbar-wrapper {
-                    padding-top: 25px;
-                    background-color: $bg-red;
-                    $tab-hd: 50px;
-                    $tab-pt: 5px;
-                    height: $tab-hd;
-
-                    .tabbar-content {
-                        height: $tab-hd;
-                        background-color: $bg-red;
-                        width: 100%;
-                        max-width: $screen-width;
-                        z-index: 5;
-
-                        &.affix {
-                            top: 0;
-                            // left: 0;
-                        }
-
-                        .tab-list {
-                            $tab-wd: calc(calc(100% - 6px) / 4);
-                            font-size: 0;
-
-                            .tab {
-                                position: relative;
-                                display: inline-block;
-                                vertical-align: bottom;
-                                // float: left;
-                                width: $tab-wd;
-                                height: calc(100% - 5px);
-                                background-color: #b02917;
-                                color: #ffb6ac;
-                                font-weight: 700;
-                                text-align: center;
-                                // font-size: 13px;
-                                // line-height: 100px;
-                                line-height: 1.2;
-                                cursor: pointer;
-                                @include va-bef($tab-hd - $tab-pt, 14px);
-
-                                &:not(:first-child) {
-                                    margin-left: 2px;
-                                }
-
-                                &.active {
-                                    background-color: #ff7133;
-                                    color: #ffd786;
-                                    padding-top: $tab-pt;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .panel-list {
-                    .panel {
-                        .panel-title {
-                            padding-top: 40px;
-                            text-align: center;
-                            font-weight: 700;
-
-                            .no {
-                                position: relative;
-
-                                >img {
-                                    height: 38px;
-                                }
-
-                                &:before,
-                                &:after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 50%;
-                                    margin-top: -1px;
-                                    display: block;
-                                    width: 37.5%;
-                                    height: 2px;
-                                    background-color: rgba(255, 255, 255, .5);
-                                }
-
-                                &:before {
-                                    left: 0;
-                                }
-
-                                &:after {
-                                    right: 0;
-                                }
-                            }
-
-                            .title {
-                                margin-top: 15px;
-                                font-size: 25px;
-                            }
-                        }
-
-                        .panel-text {
-                            margin-top: 8px;
-                            text-align: center;
-
-                            .text {
-                                font-size: 14px;
-
-                                @include screen-max(320px) {
-                                    font-size: 13.5px;
-                                    letter-spacing: -1px;
-                                }
-
-                                .mt {
-                                    margin-top: 10px;
-                                }
-
-                                .underline {
-                                    position: relative;
-
-                                    &:after {
-                                        content: '';
-                                        position: absolute;
-                                        bottom: 1px;
-                                        left: 0;
-                                        display: block;
-                                        width: 100%;
-                                        height: 1px;
-                                        background-color: $font-color;
-                                    }
-                                }
-                            }
-
-                            .picture {
-                                margin-top: 25px;
-
-                                >img {
-                                    width: 346px;
-                                }
-                            }
-                        }
-                    }
+                    margin-top: 15px;
+                    font-size: 14px;
                 }
             }
         }
     }
+}
 
-    .manpower-sec {
-        background-color: #ececec;
+.service-sec {
+    background-color: #e2ebee;
 
-        .manpower-wrapper {
-            .manpower-content {
-                .manpower-text {
+    .service-wrapper {
+        .service-content {
+            .service-title {
+                .cmt {
+                    .bar-mark {
+                        position: relative;
+
+                        >.in {
+                            position: relative;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 13px;
+                            left: 5px;
+                            bottom: 0;
+                            background-color: rgba(137, 187, 238, 0.5);
+                        }
+                    }
+                }
+            }
+
+            .service-text {
+                .item-picture {
                     margin-top: 30px;
 
-                    .manpower-tbl {
-                        $bg-th: #2b4053;
-                        width: 100%;
-                        border: 1px solid $bg-th;
-                        background-color: #fff;
-                        vertical-align: middle;
-                        table-layout: fixed;
-                        box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, .1);
-
-                        &.hold {
-                            colgroup {
-                                col:nth-child(1) {
-                                    width: 100px;
-                                }
-                            }
-                        }
-
-                        th,
-                        td {
-                            position: relative;
-                        }
-
-                        th {
-                            padding: 8px 0;
-                            background-color: $bg-th;
-                            color: #fff;
-                            text-align: center;
-                            font-size: 15px;
-                        }
-
-                        td {
-                            padding: 15px 10px;
-                            padding-right: 5px;
-                            font-size: 12.5px;
-                            word-break: keep-all;
-
-                            .dot-row {
-                                position: relative;
-                                padding-left: 12px;
-
-                                .dot {
-                                    @include pos(absolute, 0, 0);
-                                }
-                            }
-                        }
-
-                        th+td,
-                        td+td {
-                            border-left: 1px solid #959fa9;
-                        }
-
-                        tr:not(:last-child) td {
-                            border-bottom: 1px solid #959fa9;
-                        }
-
-                        &+.manpower-tbl {
-                            margin-top: 30px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .record-sec {
-        background-color: #fff;
-
-        .record-wrapper {
-            .record-content {
-                .item-list {
-
-                    .item {
-                        $item-mg: 14px;
-                        float: left;
-                        width: calc(calc(100% - #{$item-mg}) / 2);
-                        // margin: 0 10px;
-                        margin-top: 30px;
-
-                        &:nth-child(2n) {
-                            margin-left: #{$item-mg};
-                        }
-
-                        .picture {
-                            figcaption {
-                                margin-top: 10px;
-                                text-align: center;
-                                font-size: 17.5px;
-                                line-height: 1.235;
-
-                                em {
-                                    display: block;
-                                }
-
-                                .sm {
-                                    font-size: 13px;
-                                }
-                            }
-                        }
-
-                        .info {
-                            max-width: 250px;
-                            margin: 0 auto;
-                            margin-top: 5px;
-
-                            dl {
-                                color: #666;
-                                line-height: 1.235;
-                                font-size: 0;
-
-                                >* {
-                                    display: inline-block;
-                                    vertical-align: top;
-                                }
-
-                                $dt-wd: 28px;
-
-                                // dt {
-                                //     width: 5px;
-                                // }
-
-                                &:not(:last-child) dt {
-                                    width: $dt-wd;
-                                }
-
-                                &:not(:last-child) dt+dd {
-                                    width: calc(100% - #{$dt-wd});
-                                }
-
-                                &+dl {
-                                    margin-top: 7px;
-                                }
-
-                                dt,
-                                dd {
-                                    font-size: 10px;
-                                    letter-spacing: -1px;
-                                }
-
-                                dd {
-                                    word-break: keep-all;
-                                }
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-
-        .inquiry-wrapper {
-            margin-top: 40px;
-
-            .inquiry-content {
-                .inquiry-title {
-                    $inquiry-hd: 45px;
-                    height: $inquiry-hd;
-                    background: url('http://img.ebiznetworks.co.kr/landing/hoteloperation/inquiry_title_bg.jpg') repeat;
-                    border-radius: 12px;
-
-                    .title {
-                        font-size: 20px;
-                        text-align: center;
-                        line-height: $inquiry-hd;
-                        color: #fff;
-                    }
-                }
-
-                .inquiry-text {
-
-                    .card-list {
-                        .card {
-                            margin-top: 15px;
-                            position: relative;
-                            // float: left;
-                            // width: calc(calc(100% - 20px) / 2);
-                            padding: 12px;
-                            border: 1px solid #aaa;
-                            border-radius: 10px;
-                            box-sizing: border-box;
-                            font-size: 0;
-
-                            @include screen-max(320px) {
-                                padding-left: 5px;
-                                padding-right: 5px;
-                            }
-
-                            >* {
-                                display: inline-block;
-                                vertical-align: top;
-                                box-sizing: border-box;
-                            }
-
-                            $card-title-wd: 25%;
-                            $card-text-wd: calc(100% - #{$card-title-wd});
-
-                            .card-title {
-                                width: $card-title-wd;
-                                // padding-left: 5px;
-
-                                dt {
-                                    margin-top: 5px;
-                                    font-size: 11px;
-                                    color: #555;
-                                }
-
-                                dd {
-                                    margin-top: 5px;
-                                    font-size: 15px;
-                                }
-                            }
-
-                            .card-text {
-                                width: $card-text-wd;
-
-                                .text-item {
-
-                                    &+.text-item {
-                                        margin-top: 5px;
-                                    }
-
-                                    dl {
-                                        position: relative;
-                                        padding: 8px;
-                                        background-color: #f0f0f0;
-                                        border-radius: 5px;
-                                        box-sizing: border-box;
-                                        font-size: 0;
-
-                                        @include screen-max(320px) {
-                                            padding-left: 5px;
-                                            padding-right: 5px;
-                                        }
-
-                                        >* {
-                                            display: inline-block;
-                                            box-sizing: border-box;
-                                        }
-
-                                        $dt-wd: 45px;
-
-                                        dt {
-                                            width: $dt-wd;
-                                            font-size: 12px;
-                                        }
-
-                                        dd {
-                                            width: calc(100% - #{$dt-wd});
-                                            font-size: 12.5px;
-                                            color: #666;
-                                            font-weight: 500;
-
-                                            @include screen-max(320px) {
-                                                font-size: 12px;
-                                                letter-spacing: -1px;
-                                            }
-                                        }
-                                    }
-
-                                    .inquiry-btn {
-                                        margin-top: 5px;
-                                        float: left;
-                                        @include btn-base($pd: 6px 0);
-                                        @include btn-color(#2b4053);
-                                        border-color: #2b4053;
-                                        color: #fff;
-                                        font-size: 13px;
-                                        width: 48.5%;
-
-                                        &+.inquiry-btn {
-                                            float: right;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .cmt {
-                        margin-top: 15px;
-                        font-size: 13px;
-                        text-align: center;
+                    >img {
+                        width: 350px;
                     }
                 }
             }
         }
     }
 }
+
+.operation-sec {
+    padding-top: 0;
+    background-color: #f7d2a4;
+
+    .operation-wrapper {
+        $bg-red: $c-red;
+
+        .operation-title {
+            padding-top: 40px;
+            background-color: $bg-red;
+
+            .cmt {
+                color: #fff;
+            }
+
+            .down-arr {
+                position: relative;
+                @include sizes(15px);
+                margin: 5px auto 0;
+                border: 2px solid #fff;
+                transform: rotate(-45deg);
+                border-top: transparent;
+                border-right: transparent;
+            }
+
+        }
+
+        .operation-tabs {
+            .tabbar-wrapper {
+                padding-top: 25px;
+                background-color: $bg-red;
+                $tab-hd: 50px;
+                $tab-pt: 5px;
+                height: $tab-hd;
+
+                .tabbar-content {
+                    height: $tab-hd;
+                    background-color: $bg-red;
+                    width: 100%;
+                    max-width: $screen-width;
+                    z-index: 5;
+
+                    &.affix {
+                        top: 0;
+                        // left: 0;
+                    }
+
+                    .tab-list {
+                        $tab-wd: calc(calc(100% - 6px) / 4);
+                        font-size: 0;
+
+                        .tab {
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: bottom;
+                            // float: left;
+                            width: $tab-wd;
+                            height: calc(100% - 5px);
+                            background-color: #b02917;
+                            color: #ffb6ac;
+                            font-weight: 700;
+                            text-align: center;
+                            // font-size: 13px;
+                            // line-height: 100px;
+                            line-height: 1.2;
+                            cursor: pointer;
+                            @include va-bef($tab-hd - $tab-pt, 14px);
+
+                            &:not(:first-child) {
+                                margin-left: 2px;
+                            }
+
+                            &.active {
+                                background-color: #ff7133;
+                                color: #ffd786;
+                                padding-top: $tab-pt;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .panel-list {
+                .panel {
+                    .panel-title {
+                        padding-top: 40px;
+                        text-align: center;
+                        font-weight: 700;
+
+                        .no {
+                            position: relative;
+
+                            >img {
+                                height: 38px;
+                            }
+
+                            &:before,
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -1px;
+                                display: block;
+                                width: 37.5%;
+                                height: 2px;
+                                background-color: rgba(255, 255, 255, .5);
+                            }
+
+                            &:before {
+                                left: 0;
+                            }
+
+                            &:after {
+                                right: 0;
+                            }
+                        }
+
+                        .title {
+                            margin-top: 15px;
+                            font-size: 25px;
+                        }
+                    }
+
+                    .panel-text {
+                        margin-top: 8px;
+                        text-align: center;
+
+                        .text {
+                            font-size: 14px;
+
+                            @include screen-max(320px) {
+                                font-size: 13.5px;
+                                letter-spacing: -1px;
+                            }
+
+                            .mt {
+                                margin-top: 10px;
+                            }
+
+                            .underline {
+                                position: relative;
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 1px;
+                                    left: 0;
+                                    display: block;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: $font-color;
+                                }
+                            }
+                        }
+
+                        .picture {
+                            margin-top: 25px;
+
+                            >img {
+                                width: 346px;
+                            }
+                        }
+
+                        .picture-wrapper {
+                            position: relative;
+                            max-width: 346px;
+                            margin: 0 auto;
+                            margin-top: 35px;
+                            padding: 20px 5px 20px;
+                            background-color: #fff;
+                            box-sizing: border-box;
+                            border-radius: 30px;
+                            box-shadow: 3px 2px rgba(0, 0, 0, .1);
+                            font-size: 13px;
+
+                            .picture-title {
+                                position: absolute;
+                                width: 100%;
+                                top: -15px;
+                                left: 0;
+
+                                .in-title {
+                                    display: inline-block;
+                                    padding: 6px 20px;
+                                    background-color: #000;
+                                    border-radius: 30px;
+                                    color: #ffffff;
+                                }
+                            }
+
+                            .picture-fig {
+                                margin-top: 20px;
+                            }
+
+                            .picture-text {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.manpower-sec {
+    background-color: #ececec;
+
+    .manpower-wrapper {
+        .manpower-content {
+            .manpower-text {
+                margin-top: 30px;
+
+                .manpower-tbl {
+                    $bg-th: #2b4053;
+                    width: 100%;
+                    border: 1px solid $bg-th;
+                    background-color: #fff;
+                    vertical-align: middle;
+                    table-layout: fixed;
+                    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, .1);
+
+                    &.hold {
+                        colgroup {
+                            col:nth-child(1) {
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    th,
+                    td {
+                        position: relative;
+                    }
+
+                    th {
+                        padding: 8px 0;
+                        background-color: $bg-th;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 15px;
+                    }
+
+                    td {
+                        padding: 15px 10px;
+                        padding-right: 5px;
+                        font-size: 12.5px;
+                        word-break: keep-all;
+
+                        .dot-row {
+                            position: relative;
+                            padding-left: 12px;
+
+                            .dot {
+                                @include pos(absolute, 0, 0);
+                            }
+                        }
+                    }
+
+                    th+td,
+                    td+td {
+                        border-left: 1px solid #959fa9;
+                    }
+
+                    tr:not(:last-child) td {
+                        border-bottom: 1px solid #959fa9;
+                    }
+
+                    &+.manpower-tbl {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.record-sec {
+    background-color: #fff;
+
+    .record-wrapper {
+        .record-content {
+            .item-list {
+
+                .item {
+                    $item-mg: 14px;
+                    float: left;
+                    width: calc(calc(100% - #{$item-mg}) / 2);
+                    // margin: 0 10px;
+                    margin-top: 30px;
+
+                    &:nth-child(2n) {
+                        margin-left: #{$item-mg};
+                    }
+
+                    .picture {
+                        figcaption {
+                            margin-top: 10px;
+                            text-align: center;
+                            font-size: 17.5px;
+                            line-height: 1.235;
+
+                            em {
+                                display: block;
+                            }
+
+                            .sm {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .info {
+                        max-width: 250px;
+                        margin: 0 auto;
+                        margin-top: 5px;
+
+                        dl {
+                            color: #666;
+                            line-height: 1.235;
+                            font-size: 0;
+
+                            >* {
+                                display: inline-block;
+                                vertical-align: top;
+                            }
+
+                            $dt-wd: 28px;
+
+                            // dt {
+                            //     width: 5px;
+                            // }
+
+                            &:not(:last-child) dt {
+                                width: $dt-wd;
+                            }
+
+                            &:not(:last-child) dt+dd {
+                                width: calc(100% - #{$dt-wd});
+                            }
+
+                            &+dl {
+                                margin-top: 7px;
+                            }
+
+                            dt,
+                            dd {
+                                font-size: 10px;
+                                letter-spacing: -1px;
+                            }
+
+                            dd {
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .inquiry-wrapper {
+        margin-top: 40px;
+
+        .inquiry-content {
+            .inquiry-title {
+                $inquiry-hd: 45px;
+                height: $inquiry-hd;
+                background: url('http://img.ebiznetworks.co.kr/landing/hoteloperation/inquiry_title_bg.jpg') repeat;
+                // border-radius: 12px;
+
+                .title {
+                    font-size: 20px;
+                    text-align: center;
+                    line-height: $inquiry-hd;
+                    color: #fff;
+                }
+            }
+
+            .inquiry-text {
+
+                .card-list {
+                    .card {
+                        margin-top: 15px;
+                        position: relative;
+                        // float: left;
+                        // width: calc(calc(100% - 20px) / 2);
+                        padding: 12px;
+                        border: 1px solid #aaa;
+                        // border-radius: 10px;
+                        box-sizing: border-box;
+                        font-size: 0;
+
+                        @include screen-max(320px) {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+
+                        >* {
+                            display: inline-block;
+                            vertical-align: top;
+                            box-sizing: border-box;
+                        }
+
+                        $card-title-wd: 25%;
+                        $card-text-wd: calc(100% - #{$card-title-wd});
+
+                        .card-title {
+                            width: $card-title-wd;
+                            // padding-left: 5px;
+
+                            dt {
+                                margin-top: 5px;
+                                font-size: 11px;
+                                color: #555;
+                            }
+
+                            dd {
+                                margin-top: 5px;
+                                font-size: 15px;
+                            }
+                        }
+
+                        .card-text {
+                            width: $card-text-wd;
+
+                            .text-item {
+
+                                &+.text-item {
+                                    margin-top: 5px;
+                                }
+
+                                dl {
+                                    position: relative;
+                                    padding: 8px;
+                                    background-color: #f0f0f0;
+                                    border-radius: 5px;
+                                    box-sizing: border-box;
+                                    font-size: 0;
+
+                                    @include screen-max(320px) {
+                                        padding-left: 5px;
+                                        padding-right: 5px;
+                                    }
+
+                                    >* {
+                                        display: inline-block;
+                                        box-sizing: border-box;
+                                    }
+
+                                    $dt-wd: 45px;
+
+                                    dt {
+                                        width: $dt-wd;
+                                        font-size: 12px;
+                                    }
+
+                                    dd {
+                                        width: calc(100% - #{$dt-wd});
+                                        font-size: 12.5px;
+                                        color: #666;
+                                        font-weight: 500;
+
+                                        @include screen-max(320px) {
+                                            font-size: 12px;
+                                            letter-spacing: -1px;
+                                        }
+                                    }
+                                }
+
+                                .inquiry-btn {
+                                    margin-top: 5px;
+                                    float: left;
+                                    @include btn-base($pd: 6px 0);
+                                    @include btn-color(#2b4053);
+                                    border-color: #2b4053;
+                                    color: #fff;
+                                    font-size: 13px;
+                                    width: 48.5%;
+
+                                    &+.inquiry-btn {
+                                        float: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cmt {
+                    margin-top: 15px;
+                    font-size: 13px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// }
