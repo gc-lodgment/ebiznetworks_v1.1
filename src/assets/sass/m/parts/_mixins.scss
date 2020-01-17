@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-// @import './parts/variables';
-
 // 전달인자 설징이 없는 믹스인
 @mixin reset-box-model {
     margin: 0;
@@ -91,6 +89,12 @@
     display: block;
     width: $w;
     height: $h;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin max-width-center($w: $xs-max-width) {
+    max-width: $w;
     margin-left: auto;
     margin-right: auto;
 }

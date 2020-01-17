@@ -260,6 +260,103 @@
             </section>
             <!-- /.sec.manpower-sec -->
 
+            <div class="sec promise-sec">
+                <div class="promise0-wrapper">
+                    <div class="promise0-content group">
+                        <div class="comm-title promise0-title">
+                            <span class="big">이비즈네트웍스 수익형 호텔위탁운영 서비스</span>
+                            <h1 class="title"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_title.png" alt="총자산 약720억원의 튼튼한중견기업"></h1>
+                            <div class="cmt">
+                                <p>
+                                    경험으로 다져진 <em>자신감과 실행력, 튼튼한 자본력</em>은
+                                </p>
+                                <p>
+                                    <span class="bar-mark"><span class="in">안정된 호텔운영을 위해<br> 운영사가 갖추어야 할 필수 조건</span></span> 입니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="promise0-text">
+                            <h2 class="title">이비즈네트웍스의 <em class="blue">5가지 약속</em></h2>
+                            <div class="five-wrapper">
+                                <dl>
+                                    <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_01.jpg" alt="첫째"></dt>
+                                    <dd class="blue">실현 가능한 수익금을 약속하겠습니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_02.jpg" alt="둘째"></dt>
+                                    <dd class="orange">호텔의 빠른 정상화를 위해 적극적인 선투자를<br> 진행하겠습니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_03.jpg" alt="셋째"></dt>
+                                    <dd class="blue">투명한 경영을 통해 신뢰를 쌓아가겠습니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_04.jpg" alt="넷째"></dt>
+                                    <dd class="orange">약속한 수익금을 정직하게 이행하도록 노력하겠습니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_05.jpg" alt="다섯째"></dt>
+                                    <dd class="blue">경영실적으로 인정받는 믿을 수 있는 운영사가 되겠습니다.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="promise1-wrapper">
+                    <div class="plus-bar">
+                        <div class="plus">
+                            <span class="in"></span>
+                        </div>
+                    </div>
+                    <div class="promise1-content group">
+                        <div class="comm-title promise1-title">
+                            <h2 class="title"><img src="http://img.ebiznetworks.co.kr/m/landing/hoteloperation/promise1_title.png" alt="신뢰할 수 있는 업체"></h2>
+                            <div class="cmt">
+                                수년간 호텔위탁운영사로 인해 고통받는 운영사업장을 많이 보았습니다.<br>
+                                이비즈네트웍스는 안심하고 운영을 맡길 수 있는 성실함과 정직함으로<br>
+                                든든한 파트너가 될 것을 약속 드립니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="careful-wrapper">
+                    <div class="careful-content group">
+                        <div class="careful-table">
+                            <h2 class="title">
+                                <figure>
+                                    <img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/becareful.jpg" alt="이런운영사는주의하세요">
+                                </figure>
+                            </h2>
+                            <div class="text-wrapper">
+                                <dl>
+                                    <dt>01</dt>
+                                    <dd><span class="bor-b">지급 불가능한 <em class="c-red">수치의 수익금을 보장</em>하는 운영사</span></dd>
+                                </dl>
+                                <dl>
+                                    <dt>02</dt>
+                                    <dd><span class="bor-b">보장한 <em class="c-red">수익금을 이행하지 않는</em> 운영사</span></dd>
+                                </dl>
+                                <dl>
+                                    <dt>03</dt>
+                                    <dd><span class="bor-b">운영실적을 <em class="c-red">투명하게 공개하지 않는</em> 운영사</span></dd>
+                                </dl>
+                                <dl>
+                                    <dt>04</dt>
+                                    <dd>보장한 수익금에 따른 약속을 이행치 않아,<br>
+                                        <span class="bor-b">압류하고 싶으나 <em class="c-red">압류할 자산조차 없는</em> 운영사</span></dd>
+                                </dl>
+                            </div>
+                            <div class="cmt">
+                                이후에도 수익금이 발생하면 사업장을 점거하고 나가지 않아<br>
+                                명도소송을 걸고, 강제집행을 해야 하는 막대한 손실을 끼치는<br>
+                                <span class="c-red">부도덕한 함량 미달의 위탁운영사</span>가 아닌가를 반드시 확인해야 합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.sec comm-sec promise-sec -->
+
             <section class="sec comm-sec record-sec">
                 <h1 class="sr-only"></h1>
                 <div class="record-wrapper">
