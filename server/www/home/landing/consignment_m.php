@@ -292,7 +292,7 @@
                                 </dl>
                                 <dl>
                                     <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_04.jpg" alt="넷째"></dt>
-                                    <dd class="orange">약속한 수익금을 정직하게 이행하도록 노력하겠습니다.</dd>
+                                    <dd class="orange">약속한 수익금을 정직하게 이행하겠습니다.</dd>
                                 </dl>
                                 <dl>
                                     <dt><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/promise0_05.jpg" alt="다섯째"></dt>
