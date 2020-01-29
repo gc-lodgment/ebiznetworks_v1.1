@@ -272,7 +272,7 @@
                                 width: 970px;
                                 margin: 0 auto;
                                 margin-top: 90px;
-                                padding: 40px 40px 40px;
+                                padding: 40px 40px 20px;
                                 background-color: #fff;
                                 box-sizing: border-box;
                                 border-radius: 30px;
@@ -302,6 +302,14 @@
 
                                 .picture-text {
                                     margin-top: 20px;
+                                }
+
+                                .picture-cmt {
+                                    margin-top: 20px;
+                                    text-align: right;
+                                    font-size: 18px;
+                                    color: #888;
+                                    font-weight: 400;
                                 }
                             }
                         }
@@ -615,8 +623,18 @@
     .record-sec {
         background-color: #fff;
 
+        .blue {
+            color: $promise-blue;
+        }
+
         .record-wrapper {
             .record-content {
+                &+.record-content {
+                    margin-top: 70px;
+                    padding-top: 70px;
+                    border-top: 1px solid #bbb;
+                }
+
                 .item-list {
                     margin-top: 60px;
 
@@ -625,6 +643,8 @@
                         width: calc(calc(100% - 90px) / 4);
 
                         .picture {
+                            text-align: center;
+
                             figcaption {
                                 margin-top: 20px;
                                 text-align: center;
@@ -662,6 +682,15 @@
 
                         &:not(:first-child) {
                             margin-left: 30px;
+                        }
+                    }
+
+                    &.count-3 {
+                        @include center(85%);
+
+                        .item {
+                            width: calc(calc(100% - 90px) / 3);
+
                         }
                     }
                 }

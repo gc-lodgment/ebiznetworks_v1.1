@@ -117,6 +117,7 @@ include_once ("../common/top.php");
                                     운영사의 전문인력을 원격으로 지원하여,<br>
                                     <span class="c-orange">인력을 25~30명으로 줄이고 호텔 자체 인건비를 크게 절감</span> 합니다.
                                 </p>
+                                <p class="picture-cmt">월판매 4500객실 내외 기준</p>
                             </div>
 							</div>
 						</div>
@@ -186,7 +187,7 @@ include_once ("../common/top.php");
 									시설관리 인력
 								</th>
 								<td>직접 보유 인력</td>
-								<td>소방안전관리기술자, 전기안전관리기술자, 가스안전관리기술자, 도배사, 목수, 보일러공 등</td>
+								<td>소방안전관리기술자, 전기안전관리기술자, 가스안전관리기술자, 도배사, 목수, 보일러공, 주택관리자, 공인중개사 등</td>
 							</tr>
 							<tr>
 								<td>하도급 보유 인력</td>
@@ -431,6 +432,88 @@ include_once ("../common/top.php");
                     </ul>`
 				</div>
 			</div>
+            <div class="record-content group">
+                <div class="comm-title record-title">
+                    <h1 class="title"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/record02_title.png" alt="호텔운영통합서비스"></h1>
+                    <div class="cmt">
+                        이비즈네트웍스가 건축에 참여하고 직접 보유한 시설입니다.<br>
+                        건축설계 및 건축과정을 경험하고, 준공 이후 시설을 직접 관리/운영하고 있습니다.
+                    </div>
+                </div>
+                <div class="record-text">
+                    <ul class="cf item-list count-3">
+                        <li class="item">
+                            <figure class="picture">
+                                <a href="https://terms.naver.com/entry.nhn?docId=2573247&amp;cid=51878&amp;categoryId=51991" target="_blank"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/record_item_tower.png" alt="모노타워"></a>
+                                <figcaption><em>모노타워</em><span class="sm">보유/운영 : 2010. 05 ~ 2015.01</span></figcaption>
+                            </figure>
+                            <div class="info">
+                                <dl>
+                                    <dt>· 연면적 : </dt>
+                                    <dd>720.91㎡ / 대지면적 : 258.80㎡</dd>
+                                </dl>
+                                <dl>
+                                    <dt>· 규모 : </dt>
+                                    <dd>지하 1층, 지상 6층</dd>
+                                </dl>
+                                <dl>
+                                    <dt>· 서울 강남구 선릉로 99길 12</dt>
+                                </dl>
+                                <dl>
+                                    <dt>· 수상이력 : <span class="blue">2010년 강남구 아름다운 건축물 선정(CNBNEWS, 2010.12.9)</span></dt>
+                                </dl>
+                                <dl>
+                                    <dt>· 홈페이지 : <a href="https://terms.naver.com/entry.nhn?docId=2573247&amp;cid=51878&amp;categoryId=51991" target="_blank">모노타워 소개 <span class="custom-icon-winpop"></span></a></dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <figure class="picture">
+                                <a href="http://www.monopalace.com/" target="_blank"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/record_item_palace.png" alt="모노팰리스"></a>
+                                <figcaption><em>모노팰리스</em><span class="sm">보유/운영 : 2014. 03 ~ 현재</span></figcaption>
+                            </figure>
+                            <div class="info">
+                                <dl>
+                                    <dt>· 연면적 :</dt>
+                                    <dd>8,213.74㎡ / 대지면적 : 1,280.40㎡</dd>
+                                </dl>
+                                <dl>
+                                    <dt>· 규모 :</dt>
+                                    <dd>주거시설 지상 3층 ~ 지상 15층<br>상업시설 지하1층 ~ 지상 2층</dd>
+                                </dl>
+                                <dl>
+                                    <dt>· 충청남도 아산시 온천대로 1555</dt>
+                                </dl>
+                                <dl>
+                                    <dt>· 홈페이지: <a href="http://www.monopalace.com/" target="_blank">www.monopalace.com <span class="custom-icon-winpop"></span></a></dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <figure class="picture">
+                                <a href="http://www.ditower.co.kr" target="_blank"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/record_item_di.png" alt="디아이타워"></a>
+                                <figcaption><em>디아이타워</em><span class="sm">보유/운영 : 2016. 08 ~ 현재</span></figcaption>
+                            </figure>
+                            <div class="info">
+                                <dl>
+                                    <dt>· 연면적 :</dt>
+                                    <dd>4,164.99㎡ / 대지면적 : 420.40㎡</dd>
+                                </dl>
+                                <dl>
+                                    <dt>· 규모 :</dt>
+                                    <dd>지하 3층, 지상 15층</dd>
+                                </dl>
+                                <dl>
+                                    <dt>· 서울 강남구 테헤란로 82길 15</dt>
+                                </dl>
+                                <dl>
+                                    <dt>· 홈페이지: <a href="http://www.ditower.co.kr" target="_blank">www.ditower.co.kr <span class="custom-icon-winpop"></span></a></dt>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 		</div>
 		<div id="inquiry_wrapper" class="inquiry-wrapper">
 			<div class="inquiry-content group">
