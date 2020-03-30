@@ -637,10 +637,14 @@
 
                 .item-list {
                     margin-top: 60px;
+                    text-align: center;
+                    font-size: 0;
 
                     .item {
-                        float: left;
+                        display: inline-block;
+                        // float: left;
                         width: calc(calc(100% - 90px) / 4);
+                        text-align: left;
 
                         .picture {
                             text-align: center;
