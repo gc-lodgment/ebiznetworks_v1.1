@@ -1,6 +1,6 @@
 $(function () {
-    console.log('loaded')
-    tabsScroll();
+    // console.log('loaded')
+    if ($('[data-role="tabs-scroll"]').length) tabsScroll();
 });
 
 function tabsScroll() {
