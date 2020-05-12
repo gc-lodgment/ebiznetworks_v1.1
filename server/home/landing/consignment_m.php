@@ -418,8 +418,8 @@
                                 </li>
                                 <li class="item">
                                     <figure class="picture">
-                                        <a href="http://www.seabay.co.kr" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/record_item_rgb.jpg" alt="알지비스카이호텔"></a>
-                                        <figcaption><em>알지비스카이호텔</em><span class="sm">운영 : 2020. 05. 01 ~ 운영예정</span></figcaption>
+                                        <a href="http://www.seabay.co.kr" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"><img src="http://img.ebiznetworks.co.kr/landing/hoteloperation/record_item_rgb.jpg" alt="에어스카이호텔"></a>
+                                        <figcaption><em>에어스카이호텔</em><span class="sm">운영 : 2020. 05. 01 ~ 운영예정</span></figcaption>
                                     </figure>
                                     <div class="info">
                                         <dl>
@@ -435,7 +435,7 @@
                                             <dd>· 인천광역시 중구 중산동 1952-4</dd>
                                         </dl>
                                         <dl>
-                                            <dt>· 홈페이지: 준비중</dt>
+                                            <dt>· 홈페이지: <a href="http://www.hotelairsky.co.kr" target="_blank" rel="noopener noreferrer">www.hotelairsky.co.kr <span class="custom-icon-winpop"></span></a></dt>
                                         </dl>
                                     </div>
                                 </li>
